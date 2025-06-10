@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>    
+    <title>Reverse String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea al inicio verticalmente */
+            min-height: 100vh; /* Mínimo de altura para ocupar toda la vista */
+            background-color: #f0f2f5;
+            padding-top: 50px; /* Espacio superior para que no esté pegado al borde */
+            box-sizing: border-box; /* Incluye padding en el tamaño total */
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Limita el ancho máximo para una mejor legibilidad */
+            text-align: left;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px); /* Ancho completo menos el padding */
+            padding: 12px 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex; /* Para alinear el icono y el texto */
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Espacio entre el texto y el icono */
+        }
+
+        button.reverse-btn {
+            background-color: #007bff;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        button.reverse-btn:hover {
+            background-color: #0056b3;
+        }
+
+        button.copy-btn {
+            background-color: #6c757d;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button.copy-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .output-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #333;
+            min-height: 50px; /* Para asegurar que tenga una altura incluso si está vacío */
+            word-wrap: break-word; /* Permite que el texto largo se rompa */
+        }
+
+        /* Iconos (usando caracteres unicode o una fuente de iconos si la tuviéramos) */
+        .icon-reverse::before {
+            content: "\21BB"; /* Símbolo de "circulate" o "refresh" */
+            font-size: 1.2em;
+        }
+
+        .icon-copy::before {
+            content: "\1F4CB"; /* Símbolo de "clipboard" */
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-<script src="script.js"></script>
+    <div class="container">
+        <h1>Reverse String</h1>
+
+        <input type="text" id="inputString" placeholder="Hello, welcome to AI4Devs">
+
+        <button class="reverse-btn" id="reverseButton">
+            Reverse <span class="icon-reverse"></span>
+        </button>
+
+        <div class="output-box" id="outputString">
+            </div>
+
+        <button class="copy-btn" id="copyButton">
+            Copy <span class="icon-copy"></span>
+        </button>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
